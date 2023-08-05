@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4cS1GsZ8oy7LybYeELvr/af1JyECX7U6m8DDcsh9Cez0G5BQU8uoJlAk2YWZIe4tfhaX0U51ml7aJNk/R5vnpA==",
+  "success": true,
+  "projectFilePath": "E:\\Dev\\source\\repos\\csharp\\CMYK\\Viewfinder\\Viewfinder.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\edwar\\.nuget\\packages\\microsoft.toolkit.highperformance\\7.1.2\\microsoft.toolkit.highperformance.7.1.2.nupkg.sha512",
+    "C:\\Users\\edwar\\.nuget\\packages\\raylib-cslo\\4.2.0.9\\raylib-cslo.4.2.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
