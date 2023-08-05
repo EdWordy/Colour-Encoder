@@ -9,7 +9,7 @@ An encoding schema using CMYK based colour coding for the efficient storage of s
 
 ## Directory
 - CMYKify is the base application, including the encoder and decoder.
-- Viewfinder is a debugging tool for viewing textures.
+- Viewfinder is a debugging tool for viewing generated textures.
 - CMYKread is the android app for efficient encoding and decoding (TO DO)
 
 ## Screenshots
