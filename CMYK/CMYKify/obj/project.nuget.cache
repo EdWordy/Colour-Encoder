@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "F9btQdQEM5C5/vrKjLXTccL25gtMkWD8IVMOVkXe+6/Doxy/jiYV9wL1TjHG0CK9dafRfA7znNaVmkKKv/tf4g==",
+  "dgSpecHash": "b1BmN8cFC0WosFkLaglAHwctY4CWyhpKvEAPuyLVuk+hF2yTzMM7c8l842grfPZjqtBxHcMT2ZXwys2a6pc5dQ==",
   "success": true,
   "projectFilePath": "E:\\Dev\\source\\repos\\csharp\\CMYK\\CMYKify\\CMYKify.csproj",
   "expectedPackageFiles": [
@@ -12,9 +12,11 @@
     "C:\\Users\\edwar\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\edwar\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\edwar\\.nuget\\packages\\microsoft.visualstudio.vsixcolorcompiler\\17.0.31709.430\\microsoft.visualstudio.vsixcolorcompiler.17.0.31709.430.nupkg.sha512",
+    "C:\\Users\\edwar\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\edwar\\.nuget\\packages\\raylib-cs\\4.5.0.3\\raylib-cs.4.5.0.3.nupkg.sha512",
     "C:\\Users\\edwar\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\edwar\\.nuget\\packages\\sixlabors.imagesharp\\3.0.1\\sixlabors.imagesharp.3.0.1.nupkg.sha512",
+    "C:\\Users\\edwar\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
     "C:\\Users\\edwar\\.nuget\\packages\\system.drawing.primitives\\4.3.0\\system.drawing.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\edwar\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\edwar\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",

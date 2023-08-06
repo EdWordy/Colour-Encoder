@@ -101,3 +101,7 @@ E:\Dev\source\repos\csharp\CMYK\CMYKify\obj\Debug\net7.0\CMYKify.csproj.CopyComp
 E:\Dev\source\repos\csharp\CMYK\CMYKify\obj\Debug\net7.0\CMYKify.genruntimeconfig.cache
 E:\Dev\source\repos\csharp\CMYK\CMYKify\obj\Debug\net7.0\ref\CMYKify.dll
 E:\Dev\source\repos\csharp\CMYK\CMYKify\bin\Debug\net7.0\SixLabors.ImageSharp.dll
+E:\Dev\source\repos\csharp\CMYK\CMYKify\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\Dev\source\repos\csharp\CMYK\CMYKify\bin\Debug\net7.0\System.Drawing.Common.dll
+E:\Dev\source\repos\csharp\CMYK\CMYKify\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\Dev\source\repos\csharp\CMYK\CMYKify\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll

@@ -1,6 +1,4 @@
-﻿
-
-namespace CMYKify
+﻿namespace CMYKify
 {
     public class ImageHandler
     {

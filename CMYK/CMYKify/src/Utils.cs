@@ -39,5 +39,40 @@ namespace CMYKify
                 }
             }
         }
+
+        public static void DrawStringRGB(string input, int x, int y, int width, int interval, int margin)
+        {
+            for (int a = 0; a < input.Length; a++)
+            {
+                switch (input[a])
+                {
+                    case 'R':
+                        Raylib.DrawCircleV(new System.Numerics.Vector2(x, interval * y), 3, Raylib.ColorFromHSV(0, 1, 1));
+                        break;
+                    case 'G':
+                        Raylib.DrawCircleV(new System.Numerics.Vector2(x, interval * y), 3, Raylib.ColorFromHSV(120, 1, 1));
+                        break;
+                    case 'B':
+                        Raylib.DrawCircleV(new System.Numerics.Vector2(x, interval * y), 3, Raylib.ColorFromHSV(240, 1, 1));
+                        break;
+                    case ' ':
+                        Raylib.DrawCircleV(new System.Numerics.Vector2(x, interval * y), 3, Raylib.ColorFromHSV(0, 0, 0));
+                        break;
+                    default:
+                        break;
+                }
+
+                x += interval;
+                if (x > width - margin)
+                {
+                    y++;
+                    x %= width - margin;
+                    if (x < margin)
+                    {
+                        x = margin;
+                    }
+                }
+            }
+        }
     }
 }
