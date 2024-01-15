@@ -92,6 +92,8 @@ namespace CMYKify
             CvInvoke.CvtColor(blackChannelMat.Mat, blackChannelMat.Mat, ColorConversion.Gray2Bgr);
             masterMat.Mat += blackChannelMat.Mat;
 
+            // TODO: FINISH LOGIC FOR DECODING PROCESS
+
             // Show blobs
             CvInvoke.NamedWindow("Main");
             CvInvoke.Imshow("Main", masterMat.Mat);
