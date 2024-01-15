@@ -17,3 +17,5 @@ TODO
 
 ## Verision
 0.0.2
+
+STATUS: UNDER CONSTRUCTION
