@@ -3,8 +3,8 @@ An encoding schema using CMYK based colour coding for the efficient storage of s
 
 ## Features
 
-- Uses half as many units but can encode binary or hex
-- Can be printed onto paper and read back using provided scanner (built on OpenCV)
+- Can encode binary or hex but uses half as many unitys.
+- Can be printed onto paper and read back using provided scanner program (built on OpenCV)
 - 2700 character capacity per A7 Card (perhaps even slightly more possible at this size; 3000?)
 
 ## Directory
@@ -15,7 +15,9 @@ An encoding schema using CMYK based colour coding for the efficient storage of s
 ## Screenshots
 TODO
 
-## Verision
+## Version
 0.0.2
 
-STATUS: UNDER CONSTRUCTION
+---
+
+#### STATUS: UNDER CONSTRUCTION
