@@ -16,8 +16,6 @@ An encoding schema using CMYK based colour coding for the efficient storage of s
 TODO
 
 ## Version
-0.0.2
+0.1.0
 
 ---
-
-#### STATUS: UNDER CONSTRUCTION
