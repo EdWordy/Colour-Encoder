@@ -163,43 +163,6 @@
 
         // RGB+
 
-        public static string BinaryToRGB(string msg, int key)
-        {
-            // vars
-            string encoded = "";
-
-            for (int i = 0; i < msg.Length - 1; i += 2)
-            { 
-                // get the values
-                char c = msg[i];
-                char d = msg[i + 1];
-
-                // encode
-                if (c == '0' && d == '0')          // R
-                {
-                    encoded += "R";
-                }
-                else if (c == '0' && d == '1')     // G
-                {
-                    encoded += "G";
-                }
-                else if (c == '1' && d == '0')     // B
-                {
-                    encoded += "B";
-                }
-                else if (c == '1' && d == '1')     // Space
-                {
-                    encoded += " ";
-                }
-                else                                // Unknown
-                {
-                    encoded += "?";
-                }
-
-            }
-            return encoded;
-        }
-
         public static string TextToRGB(string text, int key)
         {
             // step 1 - text
@@ -299,5 +262,43 @@
             // binary to cmyk
             return BinaryToRGB(msg, 2);
         }
+
+        public static string BinaryToRGB(string msg, int key)
+        {
+            // vars
+            string encoded = "";
+
+            for (int i = 0; i < msg.Length - 1; i += 2)
+            {
+                // get the values
+                char c = msg[i];
+                char d = msg[i + 1];
+
+                // encode
+                if (c == '0' && d == '0')          // R
+                {
+                    encoded += "R";
+                }
+                else if (c == '0' && d == '1')     // G
+                {
+                    encoded += "G";
+                }
+                else if (c == '1' && d == '0')     // B
+                {
+                    encoded += "B";
+                }
+                else if (c == '1' && d == '1')     // K
+                {
+                    encoded += "K";
+                }
+                else                                // Unknown
+                {
+                    encoded += "?";
+                }
+
+            }
+            return encoded;
+        }
+
     }
 }

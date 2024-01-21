@@ -1,8 +1,10 @@
 ﻿using Emgu.CV;
 using Emgu.CV.CvEnum;
+using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using Raylib_cs;
 using Color = Raylib_cs.Color;
+using CMYKify.OpenCV;
 
 namespace CMYKify
 {
@@ -35,7 +37,6 @@ namespace CMYKify
                 //Utils.DrawStringCMYK(Cipher.TextToCMYK(msg, 2, false), 30, 2, WIDTH, 10, 30);
 
                 // rgb
-                //Utils.DrawStringRGB(Cipher.BinaryToRGB("0110100001100101011011000110110001101111", 2), 30, 2, WIDTH, 10, 30);
                 Utils.DrawStringRGB(Cipher.TextToRGB(msg, 2), 30, 2, WIDTH, 10, 30);
 
                 // cleanup
@@ -49,55 +50,13 @@ namespace CMYKify
             {
                 Raylib_cs.Image image = Raylib.LoadImageFromScreen();
                 Raylib.ExportImage(image, "test.png");
-                // convert to bmp
-                ImageHandler.SaveImageBMP(glob + "test.png", glob + "test.bmp");
             }
 
-            // find and draw
-            Mat[] mats = ImageUtils.FindMats(glob + "test.png");
-            ImageUtils.FindPointsAndDraw(glob + "test.png");
+            // decode image
+            string v = ImageDecoder.DecodeImage(glob + "test.png");
 
-            // get the mats
-            Mat blueMat = mats[0];      // B
-            blueMat -= mats[1];
-            blueMat -= mats[2];
-            //CvInvoke.BitwiseNot(blueMat, blueMat);
-            ChannelMat blueChannelMat = new(Raylib.ColorFromHSV(0, 1, 1), blueMat);
-
-            Mat greenMat = mats[1];     // G
-            greenMat -= mats[2];
-            greenMat -= mats[0];
-            //CvInvoke.BitwiseNot(greenMat, greenMat);
-            ChannelMat greenChannelMat = new(Raylib.ColorFromHSV(240, 1, 1), greenMat);
-
-            Mat redMat = mats[2];       // R
-            redMat -= mats[1];
-            redMat -= mats[0];
-            //CvInvoke.BitwiseNot(redMat, redMat);
-            ChannelMat redChannelMat = new(Raylib.ColorFromHSV(120, 1, 1), redMat);
-
-            Mat blackMat = mats[2];     // K
-            blackMat += mats[0];
-            blackMat += mats[1];
-            CvInvoke.BitwiseNot(blackMat, blackMat);
-            ChannelMat blackChannelMat = new(Raylib.ColorFromHSV(0, 0, 0), blackMat);
-
-            // create the master mat
-            ChannelMat masterMat = new();
-            masterMat.Mat = new();
-            masterMat.Create(HEIGHT, WIDTH, DepthType.Default, 3);
-
-            // merge
-            CvInvoke.Merge(new VectorOfMat(blueChannelMat.Mat, greenChannelMat.Mat, redChannelMat.Mat), masterMat.Mat);
-            CvInvoke.CvtColor(blackChannelMat.Mat, blackChannelMat.Mat, ColorConversion.Gray2Bgr);
-            masterMat.Mat += blackChannelMat.Mat;
-
-            // TODO: FINISH LOGIC FOR DECODING PROCESS
-
-            // Show blobs
-            CvInvoke.NamedWindow("Main");
-            CvInvoke.Imshow("Main", masterMat.Mat);
-            CvInvoke.WaitKey(0);
+            // write to file
+            File.WriteAllText(glob + "output.png", v);
 
             // cleanup 2
             Raylib.CloseWindow();

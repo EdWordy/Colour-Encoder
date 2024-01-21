@@ -55,7 +55,7 @@ namespace CMYKify
                     case 'B':
                         Raylib.DrawCircleV(new System.Numerics.Vector2(x, interval * y), 3, Raylib.ColorFromHSV(240, 1, 1));
                         break;
-                    case ' ':
+                    case 'K':
                         Raylib.DrawCircleV(new System.Numerics.Vector2(x, interval * y), 3, Raylib.ColorFromHSV(0, 0, 0));
                         break;
                     default:
