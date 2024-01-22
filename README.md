@@ -24,3 +24,5 @@ TODO:
 -Screenshots
 
 -Complete support for ASCII
+
+-CMYKread app
