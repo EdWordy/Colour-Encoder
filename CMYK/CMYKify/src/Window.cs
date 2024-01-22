@@ -15,7 +15,6 @@ namespace CMYKify
 
         // content
         public string msg = File.ReadAllText("E:\\Dev\\source\\repos\\csharp\\CMYK\\CMYKify\\resources\\input.txt");
-        public string msg2 = "hello";
 
         // funcs
 
@@ -30,13 +29,10 @@ namespace CMYKify
                 Raylib.ClearBackground(Color.RAYWHITE);
 
                 // cmyk
-                //Raylib.DrawText("0110100001100101011011000110110001101111", 10, 10, 24, Color.BLACK);
-                //Raylib.DrawText(Cipher.BinaryToCMYK("0110100001100101011011000110110001101111", 2, true), 10, 30, 24, Color.BLACK);
-                //Utils.DrawCMYKString(Cipher.TextToCMYK(msg2, 2, false), WIDTH);
-                //Utils.DrawStringCMYK(Cipher.TextToCMYK(msg, 2, false), 30, 2, WIDTH, 10, 30);
+                //Utils.DrawStringCMYK(ImageEncoder.TextToCMYK(msg, 2, false), 30, 2, WIDTH, 10, 30);
 
                 // rgb
-                Utils.DrawStringRGB(Cipher.TextToRGB(msg, 2), 30, 2, WIDTH, 10, 30);
+                Utils.DrawStringRGB(ImageEncoder.TextToRGB(msg, 2), 30, 2, WIDTH, 10, 30);
 
                 // cleanup
                 Raylib.EndDrawing();
@@ -57,7 +53,7 @@ namespace CMYKify
             // write to file
             File.WriteAllText(glob + "output.txt", v);
 
-            // cleanup 2
+            // final cleanip
             Raylib.CloseWindow();
         }
     }

@@ -13,7 +13,7 @@ public static class ImageDecoder
         Image<Bgr, byte> img = new Image<Bgr, byte>(imagePath);
         StringBuilder binarySequence = new StringBuilder();
 
-        // Start from the defined margin
+        // Start from the defined margins
         for (int y = 20; y < img.Height; y += Interval)
         {
             for (int x = 30; x < img.Width; x += Interval)

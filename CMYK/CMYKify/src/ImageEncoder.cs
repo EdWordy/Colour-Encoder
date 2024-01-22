@@ -1,6 +1,6 @@
 ﻿namespace CMYKify
 {
-    public class Cipher
+    public class ImageEncoder
     {
         // CMYK 
 
@@ -255,7 +255,23 @@
                     case 'z':
                         msg += "01111010";
                         break;
+                    case ' ':
+                        msg += "00100000";
+                        break;
+                    case ',':
+                        msg += "00101100";
+                        break;
+                    case '.':
+                        msg += "00101110";
+                        break;
+                    case '!':
+                        msg += "00100001";
+                        break;
+                    case '?':
+                        msg += "00111111";
+                        break;
                     default:
+                        // do nothing
                         break;
                 }
             }
