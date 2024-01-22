@@ -5,7 +5,7 @@ An encoding schema using CMYK and RGBK based colour coding for the efficient sto
 
 - Can encode binary or hex but uses half as many units.
 - Can be printed onto paper and read back using provided encoder/decoder program (built on OpenCV).
-- 2700 character capacity per A7 Card (perhaps even slightly more possible at this size; 3000?).
+- 2150 Character capacity at print size A7 (image size 1200 x 800 px).
 
 ## Directory
 - CMYKify is the base application, including the encoder and decoder.
