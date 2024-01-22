@@ -161,7 +161,7 @@
             return encoded;
         }
 
-        // RGB+
+        // RGBK
 
         public static string TextToRGB(string text, int key)
         {

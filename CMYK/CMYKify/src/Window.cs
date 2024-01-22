@@ -4,7 +4,6 @@ using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using Raylib_cs;
 using Color = Raylib_cs.Color;
-using CMYKify.OpenCV;
 
 namespace CMYKify
 {
@@ -15,7 +14,7 @@ namespace CMYKify
         public int WIDTH;
 
         // content
-        public string msg = File.ReadAllText("E:\\Dev\\source\\repos\\csharp\\CMYK\\CMYKify\\resources\\file1.txt");
+        public string msg = File.ReadAllText("E:\\Dev\\source\\repos\\csharp\\CMYK\\CMYKify\\resources\\input.txt");
         public string msg2 = "hello";
 
         // funcs
@@ -43,20 +42,20 @@ namespace CMYKify
                 Raylib.EndDrawing();
             }
 
-            string glob = "E:\\Dev\\source\\repos\\csharp\\CMYK\\CMYKify\\bin\\Debug\\net7.0\\";
+            string glob = "E:\\Dev\\source\\repos\\csharp\\CMYK\\CMYKify\\resources\\";
 
             // save the image
-            if (File.Exists("test.png") != true)
+            if (File.Exists(glob + "test.png") != true)
             {
                 Raylib_cs.Image image = Raylib.LoadImageFromScreen();
-                Raylib.ExportImage(image, "test.png");
+                Raylib.ExportImage(image, glob + "test.png");
             }
 
             // decode image
             string v = ImageDecoder.DecodeImage(glob + "test.png");
 
             // write to file
-            File.WriteAllText(glob + "output.png", v);
+            File.WriteAllText(glob + "output.txt", v);
 
             // cleanup 2
             Raylib.CloseWindow();
