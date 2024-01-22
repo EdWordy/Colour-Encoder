@@ -18,3 +18,9 @@ TODO
 ## Version
 0.1.0
 
+---
+TODO:
+
+-Screenshots
+
+-Complete support for ASCII
