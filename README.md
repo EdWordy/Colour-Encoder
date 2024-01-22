@@ -25,4 +25,6 @@ TODO:
 
 -Complete support for ASCII
 
+-Finish CMYK decoding; RGBK is done.
+
 -CMYKread app
