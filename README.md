@@ -1,4 +1,4 @@
-# CMYK-Encoder
+# Colour-Encoder
 An encoding schema using CMYK and RGBK based colour coding for the efficient storage of short and medium length data.
 
 ## Features
