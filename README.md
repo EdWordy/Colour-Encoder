@@ -5,7 +5,7 @@ An encoding schema using colour coding for the efficient storage of short and me
 
 - Can encode binary or hex but uses half as many units.
 - Can be printed onto paper and read back using provided encoder/decoder program (built on OpenCV).
-- 2150 Character capacity at print size A7 (image size 1200 x 800 px).
+- 9000 Character capacity at print size A7 (image size 1200 x 800 px).
 
 ## Directory
 - CMYKify is the base application, including the encoder and decoder.
