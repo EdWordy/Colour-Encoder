@@ -3,7 +3,7 @@ An encoding schema using colour coding for the efficient storage of short and me
 
 ## Features
 
-- Can encode binary or hex but uses half as many units.
+- Can encode binary but uses half as many units.
 - Can be printed onto paper and read back using provided encoder/decoder program (built on OpenCV).
 - 9000 Character capacity at print size A7 (image size 1200 x 800 px).
 
