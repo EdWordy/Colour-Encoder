@@ -6,7 +6,7 @@ using System.Text;
 
 public static class ImageDecoder
 {
-    private const int Interval = 10; // Horizontal interval between circles
+    private const int Interval = 5; // interval between circles
 
     public static string DecodeImage(string imagePath)
     {
@@ -14,7 +14,7 @@ public static class ImageDecoder
         StringBuilder binarySequence = new StringBuilder();
 
         // Start from the defined margins
-        for (int y = 20; y < img.Height; y += Interval)
+        for (int y = 10; y < img.Height; y += Interval)
         {
             for (int x = 30; x < img.Width; x += Interval)
             {

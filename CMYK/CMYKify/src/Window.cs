@@ -32,7 +32,7 @@ namespace CMYKify
                 //Utils.DrawStringCMYK(ImageEncoder.TextToCMYK(msg, 2, false), 30, 2, WIDTH, 10, 30);
 
                 // rgb
-                Utils.DrawStringRGB(ImageEncoder.TextToRGB(msg, 2), 30, 2, WIDTH, 10, 30);
+                Utils.DrawStringRGB(ImageEncoder.TextToRGB(msg, 2), 30, 2, WIDTH, 5, 30); // 5 interval = 10 and 30 margins; 10 interval = 20 and 30 margins
 
                 // cleanup
                 Raylib.EndDrawing();
