@@ -169,6 +169,7 @@
 
             // vars
             string msg = "";
+            int checksum = 0;
 
             // iterate the message length
             for (int i = 0; i < text.Length; i++)
@@ -367,6 +368,17 @@
                         break;
                 }
             }
+
+            // Calculate checksum
+            foreach (char c in msg)
+            {
+                checksum += c == '1' ? 1 : 0;
+            }
+            checksum %= 256; // Modulo 256 for manageability
+
+            // Append checksum to msg as an 8-bit binary string
+            msg += Convert.ToString(checksum, 2).PadLeft(8, '0');
+
             // binary to cmyk
             return BinaryToRGB(msg, 2);
         }

@@ -27,6 +27,26 @@ public static class ImageDecoder
             }
         }
 
+        // Extract and remove checksum from the binary sequence
+        string receivedChecksumBinary = binarySequence.ToString().Substring(binarySequence.Length - 8);
+        binarySequence.Remove(binarySequence.Length - 8, 8);
+        int receivedChecksum = Convert.ToInt32(receivedChecksumBinary, 2);
+
+        // Calculate expected checksum
+        int expectedChecksum = 0;
+        foreach (char c in binarySequence.ToString())
+        {
+            expectedChecksum += c == '1' ? 1 : 0;
+        }
+        expectedChecksum %= 256;
+
+        // Validate checksum
+        if (receivedChecksum != expectedChecksum)
+        {
+            return "Error: Checksum does not match. Data may be corrupted.";
+        }
+
+        // Convert binary to string if checksum is valid
         return BinaryToString(binarySequence.ToString());
     }
 
