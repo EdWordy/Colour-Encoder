@@ -13,7 +13,13 @@ An encoding schema using colour coding for the efficient storage of short and me
 - CMYKread is the android app for efficient encoding and decoding (TO DO).
 
 ## Screenshots
-TODO
+Image Encoding Process
+
+![The image encoding process, from png to text and back again](https://github.com/EdWordy/Colour-Encoder/blob/main/images/Colour-Encoder_Chart.png)
+
+Encoded Image
+
+![The encoded image, in RGBK dots](https://github.com/EdWordy/Colour-Encoder/blob/main/images/Colour-Encoder_SS1.png)
 
 ## Version
 0.1.0
@@ -21,10 +27,8 @@ TODO
 ---
 TODO:
 
--Screenshots
-
--Complete support for ASCII
+-Complete support for ASCII (just punct left)
 
 -Finish CMYK decoding; RGBK is done.
 
--CMYKread app
+-Reader app
